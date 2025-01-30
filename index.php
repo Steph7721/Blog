@@ -1,12 +1,8 @@
 <?php 
-  require_once __DIR__ . "/template/_header.php";
-  
-  $articles = [
-    ["title" => "Php VS Python", "content" => "Test", "image" => "1-php-vs-python.jpg"],
-    ["title" => "React ou React Native ?", "content" => "Test", "image" => "2-react-vs-react-native.jpg"],
-    ["title" => "Les meilleurs outils devops", "content" => "Test", "image" => "3-devops.png"],
-  ];
-  
+
+require_once __DIR__ . "/lib/article.php";
+require_once __DIR__ . "/template/_header.php";
+
 ?>
 
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -23,21 +19,12 @@
 </div>
 
 <div class="row text-center">
-  <?php foreach($articles as $key=>$article) { ?>
-  <div class="col-md-4 my-2">
-    <div class="card">
-      <img src="uploads/articles/<?=$article['image'] ?>" class="card-img-top" alt="<?=$article['title'] ?>">
-      <div class="card-body">
-        <h5 class="card-title"><?=$article['title'] ?></h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Acceder à l'article</a>
-      </div>
-    </div>
-  </div>
-  <?php } ?>
+    <?php foreach ($articles as $key=>$article) { 
+        require __DIR__ . "/template/_article.php";
+    } ?>
 
 </div>
-      
+     
 <?php 
   require_once __DIR__ . "/template/_footer.php";
 ?>
