@@ -1,11 +1,12 @@
 <?php
 
 $mainMenu = [
-  ['page' => 'index.php', 'title' => 'Accueil', 'meta_description' => 'TechTrendz, le site de référence pour les actualités tech !'],
-  ['page' => 'actualites.php', 'title' => 'Actualités', 'meta_description' => ' Découvrez les dernières actualités tech !'],
-  ['page' => ' a_propos.php', 'title' => 'A propos', 'meta_description' => ' En savoir plus sur TechTrendz'],
+  "index.php" => ["title" => "Accueil", "head_title" => "Accueil TechTrendz", "meta_description" => "TechTrendz, le site de référence pour les actualités tech !"],
+  "actualites.php" => ["title" => "Actualités", "head_title" => "Actualités TechTrendz", "meta_description" => "Découvrez les dernières actualités tech !"],
+  "a_propos.php" => ["title" => "A propos", "head_title" => "A propos TechTrendz", "meta_description" => "En savoir plus sur TechTrendz"],
 ];
 
+$currentPage = basename($_SERVER["SCRIPT_NAME"]);
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ $mainMenu = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible"content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechTrendz</title>
+    <title><?=$mainMenu[$currentPage]["head_title"] ?></title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/override-bootstrap.css">
@@ -32,7 +33,7 @@ $mainMenu = [
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <?php foreach ($mainMenu as $key => $menuItem) {?>
-            <li><a href="<?=$menuItem ["page"]; ?>" class="nav-link px-2"><?=$menuItem ["title"]; ?></a></li>
+            <li><a href="<?=$key; ?>" class="nav-link px-2"><?=$menuItem ["title"]; ?></a></li>
           <?php } ?>
         </ul>
 
