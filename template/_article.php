@@ -4,7 +4,7 @@
       <div class="card-body">
         <h5 class="card-title"><?=$article['title'] ?></h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="actualite.php" class="btn btn-primary">Acceder à l'article</a>
+        <a href="actualite.php?id=<?=$key?>" class="btn btn-primary">Acceder à l'article</a>
       </div>
     </div>
   </div>
