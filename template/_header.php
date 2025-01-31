@@ -1,12 +1,7 @@
 <?php
 
-$mainMenu = [
-  "index.php" => ["title" => "Accueil", "head_title" => "Accueil TechTrendz", "meta_description" => "TechTrendz, le site de référence pour les actualités tech !"],
-  "actualites.php" => ["title" => "Actualités", "head_title" => "Actualités TechTrendz", "meta_description" => "Découvrez les dernières actualités tech !"],
-  "a_propos.php" => ["title" => "A propos", "head_title" => "A propos de TechTrendz", "meta_description" => "En savoir plus sur TechTrendz"],
-];
-
 $currentPage = basename($_SERVER["SCRIPT_NAME"]);
+
 ?>
 
 <!DOCTYPE html>
@@ -33,14 +28,18 @@ $currentPage = basename($_SERVER["SCRIPT_NAME"]);
         </div>
 
         <ul class="nav nav-pills col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <?php foreach ($mainMenu as $key => $menuItem) {?>
+          <?php foreach ($mainMenu as $key => $menuItem) {
+            if(!$menuItem["exclude"]) {
+            ?>
             <li class="nav-item"><a href="<?=$key; ?>" class="nav-link px-2 <?php
               if($currentPage === $key){echo "active";}
               //Ceci est une autre façon de faire de la condition ternaire ci-dessus
               //echo $currentPage === $key ? "active" : "";
 
               ?>"><?=$menuItem["title"]; ?></a></li>
-          <?php } ?>
+          <?php }
+            }
+          ?>
         </ul>
 
         <div class="col-md-3 text-end">
