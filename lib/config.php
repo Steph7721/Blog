@@ -1,6 +1,6 @@
 <?php
 
-define("_DOMAIN_", ".techtrendz.local");
+define("_DOMAIN_", ".localhost");
 define("_DB_SERVER_", "localhost");
 define("_DB_NAME_", "techtrendz");
 define("_DB_USER_", "Stephen");

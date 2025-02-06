@@ -1,10 +1,8 @@
 <?php 
-
-
-require_once __DIR__ . "/lib/config.php"; 
+require_once __DIR__ . "/lib/config.php";
+require_once __DIR__ . "/lib/session.php";
 require_once __DIR__ . "/lib/pdo.php"; 
 require_once __DIR__ . "/lib/article.php"; 
-
 require_once __DIR__ . "/lib/menu.php"; 
 
 $mainMenu["actualite.php"] = ["head_title" => "Article introuvable", "meta_description" => "Article introuvable", "exclude" => true];
@@ -25,10 +23,6 @@ if (isset($_GET["id"])) {
     $error = true;
 }
 
-
-
-
-
 require_once __DIR__ . "/template/_header.php"; 
 
 ?>
@@ -46,8 +40,5 @@ require_once __DIR__ . "/template/_header.php";
 <?php } else { ?>
     <h1>Article introuvable</h1>
 <?php } ?>
-
-
-
 
 <?php require_once __DIR__ . "/template/_footer.php"; ?>
