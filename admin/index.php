@@ -1,5 +1,6 @@
 <?php
   require_once __DIR__ . "/template/_header.php";
+
   adminOnly();
 ?>
 
@@ -10,5 +11,4 @@
   </div>
 </div>
 
-<?php require_once __DIR__ . "/template/_footer.php";
-?>
+<?php require_once __DIR__ . "/template/_footer.php"; ?>

@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . "/../../lib/config.php";
 require_once __DIR__ . "/../../lib/session.php";
+
+adminOnly();
 ?>
 
 <!DOCTYPE html>
@@ -30,13 +32,13 @@ require_once __DIR__ . "/../../lib/session.php";
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page">
+                    <a href="index.php" class="nav-link active" aria-current="page">
                     <i class="bi-speedometer2 bi pe-none me-2"></i>
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-white">
+                    <a href="articles.php" class="nav-link text-white">
                         <i class="bi-table bi pe-none me-2"></i>
                         Articles
                     </a>

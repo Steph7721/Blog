@@ -1,5 +1,5 @@
 <?php
-
+    require_once __DIR__ . "/../lib/session.php";
     $currentPage = basename($_SERVER["SCRIPT_NAME"]);
 
 ?>
