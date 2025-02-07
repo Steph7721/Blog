@@ -9,3 +9,4 @@ define("_ASSETS_IMAGES_FOLDER_", "assets/images/");
 define("_ARTICLES_IMAGES_FOLDER_", "uploads/articles/");
 define("_HOME_ARTICLES_LIMIT_", 3);
 define("_ADMIN_ITEM_PER_PAGE_", 10);
+define("_APP_EMAIL_", "stephen.dasilva@live.com");

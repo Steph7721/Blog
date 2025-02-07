@@ -2,10 +2,10 @@
 require_once __DIR__ . "/lib/config.php";
 require_once __DIR__ . "/lib/pdo.php";
 require_once __DIR__ . "/lib/user.php";
-require_once __DIR__ . "/lib/menu.php";
 require_once __DIR__ . "/template/_header.php";
 
 $errors = [];
+$messages = [];
 
 if (isset($_POST["loginUser"])) {
     $email = $_POST["email"];
@@ -30,23 +30,28 @@ if (isset($_POST["loginUser"])) {
 
 <h1>Login</h1>
 
-<?php foreach ($errors as $error) { ?>
-    <div class="alert alert-danger">
-        <?=$error; ?>
+<?php foreach ($messages as $message) { ?>
+    <div class="alert alert-success" role="alert">
+        <?= $message; ?>
     </div>
 <?php } ?>
-
-<form method="post">
+<?php foreach ($errors as $error) { ?>
+    <div class="alert alert-danger" role="alert">
+        <?= $error; ?>
+    </div>
+<?php } ?>
+<form method="POST">
     <div class="mb-3">
-        <label class="form-label" for="email">Email</label>
-        <input type="email" name="email" id="email" class="form-control" required>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email">
     </div>
     <div class="mb-3">
-        <label class="form-label" for="password">Mot de passe</label>
-        <input type="password" name="password" id="password" class="form-control" required>
+        <label for="password" class="form-label">Mot de passe</label>
+        <input type="password" class="form-control" id="password" name="password">
     </div>
 
-    <input type="submit" value="Connexion" name="loginUser" class="btn btn-primary">
+    <input type="submit" name="loginUser" class="btn btn-primary" value="Enregistrer">
 
 </form>
 

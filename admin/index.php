@@ -1,7 +1,9 @@
 <?php
-  require_once __DIR__ . "/template/_header.php";
+require_once __DIR__ . "/../lib/config.php";
+require_once __DIR__ . "/../lib/session.php";
+adminOnly();
 
-  adminOnly();
+require_once __DIR__ . "/template/_header.php";
 ?>
 
 <div class="px-4 py-5 my-5 text-left">
