@@ -1,0 +1,21 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "php.debug.executablePath": "",
+    "open-php-html-js-in-browser.documentRootFolder": "C:\\xampp\\htdocs\\Steph",
+    "open-php-html-js-in-browser.customUrlToOpen": "http://localhost:3306/${relativeDirnameDocumentRoot}/${fileBasename}",
+    "vscode-edge-devtools.webhint": false,
+    "files.autoSave": "afterDelay",
+    "workbench.iconTheme": "material-icon-theme",
+    "git.enableSmartCommit": true,
+    "[php]": {
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+    },
+    "json.schemas": [
+
+    ],
+
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+}
